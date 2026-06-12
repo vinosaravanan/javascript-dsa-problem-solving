@@ -4,7 +4,7 @@
 
 ////  4 Approache
 
-///  Using loop 
+/// 1, Using loop 
 function ReverseStrWithLoop(str){
     let text = '';
     for (let i = str.length - 1; i >= 0; i--) {
@@ -16,3 +16,14 @@ function ReverseStrWithLoop(str){
 
 console.log(ReverseStrWithLoop('Hollo'));
 
+//// 2, Using Recursion 
+
+function ReverseStrWithRecursion(str){
+       if (str === '') {
+          return ""
+       }
+       return ReverseStrWithRecursion(str.slice(1)) + str[0]
+}
+
+
+console.log('Str REverse with REcursion',ReverseStrWithRecursion('hollo'));
