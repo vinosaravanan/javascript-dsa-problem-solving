@@ -1,4 +1,4 @@
-/////           1,  How do you reverse a given string in place?
+/////           1,  How do you reverse a given string 
 //////                       input - hollo
 /////                        output - olloh
 
@@ -26,4 +26,14 @@ function ReverseStrWithRecursion(str){
 }
 
 
-console.log('Str REverse with REcursion',ReverseStrWithRecursion('hollo'));
+console.log('Str REverse with REcursion ---',ReverseStrWithRecursion('hollo'));
+
+/// 3. Using build-in method like split, reverse, and join;
+
+
+function ReverseStrWithBuildmethod(str){
+  return  str.split('').reverse().join('')
+
+};
+
+console.log('REverse Str With Build-method ---',ReverseStrWithBuildmethod('world'));
