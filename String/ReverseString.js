@@ -12,7 +12,6 @@ function ReverseStrWithLoop(str) {
   }
   return text;
 }
-
 console.log(ReverseStrWithLoop("Hollo"));
 
 //// 2, Using Recursion
