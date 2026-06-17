@@ -65,3 +65,15 @@ console.log(
   "Print Dublicate With Map",
   PrintDublicateWithMap("programming"),
 );
+
+//// approche 4 Filter build-in method 
+function PrintduplicateWithFilter(str){
+     const dublicate = str.split('').filter((char, index, str) => {
+         return str.indexOf(char) !== index && str.lastIndexOf(char) === index
+     })
+
+     return dublicate
+}
+
+
+console.log('Print duplicate Character With Filter-method',PrintduplicateWithFilter('programming'));
