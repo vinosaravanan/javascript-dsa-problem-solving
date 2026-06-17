@@ -24,7 +24,7 @@ function PrintDublicateWithObj(str) {
 }
 console.log("Print Dublicate With Obj", PrintDublicateWithObj("programming"));
 
-/////////// Aproche 2 Using a Array ;
+/////////// Approche 2 Using a Array ;
 
 function PrintDublicateWithArray(str) {
   let charSeen = [];
@@ -44,4 +44,24 @@ function PrintDublicateWithArray(str) {
 console.log(
   "Print Dublicate With Array",
   PrintDublicateWithArray("programming"),
+);
+
+//// approche 3 Using a map
+function PrintDublicateWithMap(str){
+     let charMap = new Map();
+     let dublicate = [];
+     for (const char of str) {
+         charMap.set(char, (charMap.get(char) || 0) + 1)
+     };
+     for (const [char, count] of charMap) {
+        if (count > 1) {
+           dublicate.push(char)
+        }
+     }
+     return dublicate
+}
+
+console.log(
+  "Print Dublicate With Map",
+  PrintDublicateWithMap("programming"),
 );
