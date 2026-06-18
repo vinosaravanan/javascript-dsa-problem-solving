@@ -39,3 +39,13 @@
 console.log('are Anagrams With Object', areAnagramWithObject('listen', 'silent'));
 console.log('are Anagrams With Object', areAnagramWithObject('hollo', 'world'));
 
+/////1, using Sort and Compare with Build-in 
+
+function areAnagram(str1, str2){
+   const Normalis = (str) => str.replace(/\s+/g, '').toLowerCase() /// for Replace space and convert to lowercase
+      
+   return Normalis(str1).split('').sort().join("") === Normalis(str2).split('').sort().join('') 
+}
+
+console.log('are Anagrams ', areAnagram('listen', 'silent'));
+console.log('are Anagrams ', areAnagram('hollo', 'world'));
