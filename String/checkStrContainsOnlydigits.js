@@ -30,3 +30,11 @@ function isOnlyDigitsWithcharCodeAt(str) {
 console.log('Using for loop and charCodeAt',isOnlyDigitsWithcharCodeAt("123456"));
 console.log('Using for loop and charCodeAt',isOnlyDigitsWithcharCodeAt("123456R"));
 
+/// 3. Using Array.every()
+
+function isOnlyDigits(str) {
+    return str.length > 0 && str.split('').every(ch => ch >= '0' && ch <= '9');
+}
+console.log('Using Array.every method' ,isOnlyDigits("123456"));
+console.log('Using Array.every method',isOnlyDigits("123456R"))
+
