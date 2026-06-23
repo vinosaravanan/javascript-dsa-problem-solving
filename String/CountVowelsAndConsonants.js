@@ -32,3 +32,19 @@ function countVowelsAndConsonants(str) {
 }
 
 console.log('Brute Force Technique', countVowelsAndConsonants('programming'))
+
+//// 2, Set + for...of Loop (Recommended for job)
+function countVowelsAndConsonants(str) {
+    const vowelsSet = new Set(['a', 'e', 'i', 'o', 'u']);
+    let vowels = 0, consonants = 0;
+
+    for (const char of str.toLowerCase()) {
+        if (/[a-z]/.test(char)) {
+            vowelsSet.has(char) ? vowels++ : consonants++;
+        }
+    }
+
+    return { vowels, consonants };
+}
+
+console.log('with set + for Loop',countVowelsAndConsonants('programming'));
