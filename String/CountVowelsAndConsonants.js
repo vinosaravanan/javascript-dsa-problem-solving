@@ -48,3 +48,14 @@ function countVowelsAndConsonants(str) {
 }
 
 console.log('with set + for Loop',countVowelsAndConsonants('programming'));
+
+//// 3, RegEx Match (Fast for Small Strings)
+function countVowelsAndConsonants(str) {
+    const lowerStr = str.toLowerCase();
+    const vowels = lowerStr.match(/[aeiou]/g)?.length || 0;
+    const consonants = lowerStr.match(/[a-z]/g)?.length || 0 - vowels;
+
+    return { vowels, consonants: consonants - vowels };
+}
+
+console.log('countVowelsAndConsonants with RegEx Match', countVowelsAndConsonants('programming'));
