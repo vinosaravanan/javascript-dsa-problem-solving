@@ -23,3 +23,13 @@ function CheckPalindrom(str) {
 
 console.log('CheckPalindrom with Two-Pointer Technique',CheckPalindrom("madam"));
 console.log('CheckPalindrom with Two-Pointer Technique',CheckPalindrom("hello"));
+
+//// 2. Case-Insensitive and Space-Ignoring Version;
+function isPalindrome(str) {
+    str = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return str === str.split('').reverse().join('');
+}
+
+console.log('check palindrome with Case-Insensitive',isPalindrome("madam"));
+console.log('check palindrome with Case-Insensitive',isPalindrome("hollo"));
+
