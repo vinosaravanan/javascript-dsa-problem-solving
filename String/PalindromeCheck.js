@@ -33,3 +33,16 @@ function isPalindrome(str) {
 console.log('check palindrome with Case-Insensitive',isPalindrome("madam"));
 console.log('check palindrome with Case-Insensitive',isPalindrome("hollo"));
 
+/// 3. Manual Reverse and Compare
+function isPalindromeWithLoop(str){
+  let reversed = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+     reversed += str[i]
+  }
+  return reversed === str
+}
+console.log('isPalindrome check with Loop', isPalindromeWithLoop('madam'));
+console.log('isPalindrome check with Loop', isPalindromeWithLoop('hollo'));
+
+
+
