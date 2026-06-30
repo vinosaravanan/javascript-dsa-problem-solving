@@ -41,3 +41,11 @@ function RemoveDublicateWithObj(str) {
   return result;
 }
 console.log("RemoveDublicateWith-Obj |", RemoveDublicateWithObj("abcabc"));
+
+//// 4. Using reduce() (Functional Style);
+function RemoveDublicateWithReduceMethod(str) {
+  return [...str].reduce((acc, char) => {
+       return acc.includes(char) ? char : acc + char
+  }, '')
+}
+console.log('RemoveDublicateWith-Reduce-Method |', RemoveDublicateWithReduceMethod('abcabc'));
