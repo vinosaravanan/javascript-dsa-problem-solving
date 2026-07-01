@@ -17,3 +17,12 @@ function ReplaceCharInStr(str, target, replaceChar) {
 }
 console.log('ReplaceCharInStr-Brute-Force |', ReplaceCharInStr('banana', 'a', 'x'));
 
+/// 2, Interview Recommended Approach (Array + Join)
+function ReplaceCharInStrWithArr(str, target, replaceChar) {
+   let result = [];
+   for (const char of str) {
+      result.push(char !== target ? char : replaceChar)
+   }
+  return result.join('')
+}
+console.log('ReplaceCharInStrWith-Array |', ReplaceCharInStrWithArr('banana', 'a', 'x'));
