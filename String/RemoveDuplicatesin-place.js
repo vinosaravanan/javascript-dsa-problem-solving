@@ -6,7 +6,7 @@
 //// Modify the array in-place (using a write pointer technique).
 //// Join the array back into a string at the end.
 
-/// with set mrthod
+/// with set method
 function removeDuplicatesWithSet(str) {
   const chars = str.split('');   
   const seen = new Set();
@@ -28,3 +28,29 @@ function removeDuplicatesWithSet(str) {
 console.log('removeDuplicatesWith-Set-Method |',removeDuplicatesWithSet("aabbccddeeff")); // "abcdef"
 console.log('removeDuplicatesWith-Set-Method |',removeDuplicatesWithSet("programming"));  // "progamin"
 console.log('removeDuplicatesWith-Set-Method |', removeDuplicatesWithSet("mississippi"));  // "misp"
+
+/// withod set method
+function removeDuplicatesNoExtraSpacewithodSet(str) {
+  const chars = str.split('');
+  let writeIndex = 1;
+
+  for (let i = 1; i < chars.length; i++) {
+    let isDuplicate = false;
+    for (let j = 0; j < writeIndex; j++) {
+      if (chars[j] === chars[i]) {
+        isDuplicate = true;
+        break;
+      }
+    }
+    if (!isDuplicate) {
+      chars[writeIndex] = chars[i];
+      writeIndex++;
+    }
+  }
+
+  chars.length = writeIndex;
+  return chars.join('');
+}
+
+console.log('removeDuplicates-NoExtraSpace-withodSet |', removeDuplicatesNoExtraSpacewithodSet('aabbccddeeff'));
+
