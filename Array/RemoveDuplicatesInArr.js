@@ -15,14 +15,23 @@ function RemoveDublicateWithObj(arr) {
   return unique;
 }
 console.log(
-  "RemoveDublicateWith-Loop-Obj",
+  "RemoveDublicateWith-Loop-Obj |",
   RemoveDublicateWithObj([1, 1, 2, 3, 2, 4, 5, 5]),
 );
 
-/// Aproche 2 Using Set method  Set is a collection of unique values.
-
+/// Approche 2 Using Set method  Set is a collection of unique values.
 const setarr = [1, 1, 2, 3, 2, 4, 5, 5];
-
 const setRes = [...new Set(setarr)] // set method only take uniqie value 
-console.log('set method ', setRes);
+console.log('RemoveDublicateWith-set-method |', setRes);
 
+/// Approche 3 Using Loop with includes method
+function RemoveDublicateWithIncludes(arr){
+  let Dublicates = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!Dublicates.includes(arr[i])) {
+        Dublicates.push(arr[i])
+    }
+  }
+  return Dublicates
+}
+console.log('RemoveDublicateWith-includes |',RemoveDublicateWithIncludes([1, 1, 2, 3, 2, 4, 5, 5]));
