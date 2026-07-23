@@ -42,3 +42,15 @@ function RemoveDublicateWithFilter(arr){
   return res
 }
 console.log('RemoveDublicateWith-Filter |',RemoveDublicateWithFilter([1, 1, 2, 3, 2, 4, 5, 5]));
+
+/// Approche 5 Using Reduce Method
+function RemoveDublicateWithReduce(arr){
+  let res = arr.reduce((arr, item) => {
+        if (!arr.includes(item)) {
+            arr.push(item)
+        }
+        return arr
+  }, [])
+  return res
+}
+console.log('RemoveDublicateWith-Reduce |', RemoveDublicateWithReduce([1, 1, 2, 3, 2, 4, 5, 5]));
