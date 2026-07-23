@@ -35,3 +35,10 @@ function RemoveDublicateWithIncludes(arr){
   return Dublicates
 }
 console.log('RemoveDublicateWith-includes |',RemoveDublicateWithIncludes([1, 1, 2, 3, 2, 4, 5, 5]));
+
+/// Approche 4 Using Filter Method
+function RemoveDublicateWithFilter(arr){
+  let res = arr.filter((item, index, arr) => arr.indexOf(item) === index)
+  return res
+}
+console.log('RemoveDublicateWith-Filter |',RemoveDublicateWithFilter([1, 1, 2, 3, 2, 4, 5, 5]));
