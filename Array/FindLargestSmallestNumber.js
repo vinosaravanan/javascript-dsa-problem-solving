@@ -31,3 +31,12 @@ function FindLargestAndSmallestWithMaxandMin(nums){
   return {largest, smallest}
 }
 console.log('FindLargestAndSmallestWithMaxandMin |', FindLargestAndSmallestWithMaxandMin([3, 5, 1, 9, 2, 8]));
+
+///// Approach 3 ; Use JavaScript's Sort Method
+function FindLargestAndSmallestWithWithSort(nums){
+    nums = nums.sort((a, b) => a -b)
+    let largest = nums[0];
+    let smallest = nums[nums.length - 1];
+    return {largest, smallest}
+}
+console.log('FindLargestAndSmallestWithWithSort |', FindLargestAndSmallestWithWithSort([3, 5, 1, 9, 2, 8]));
