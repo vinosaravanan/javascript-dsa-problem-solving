@@ -56,3 +56,20 @@ function FullName(users){
 }
 console.log(' FullName |', FullName([{ first: "John", last: "Doe" },{ first: "Jane", last: "Smith" }]));
 
+//////////  5. Add "isAvailable"
+//   const products = [{ name: "Phone", stock: 10 },{ name: "TV", stock: 0 }];
+/// Expected
+//[{name: "Phone",stock: 10,isAvailable: true},{name: "TV",stock: 0,isAvailable: false}]
+
+function IsAvailable(products){
+  let res = products.map((product, i) => {
+     if (product.stock >= 1) {
+         product.isAvailable = true
+     } else {
+         product.isAvailable = false
+     }
+     return product
+  })
+  return res
+}
+console.log('IsAvailable', IsAvailable([{ name: "Phone", stock: 10 },{ name: "TV", stock: 0 }]));
