@@ -99,3 +99,43 @@ function AddDiscountInObj(products){
 return res
 }
 console.log('AddDiscountInObj |', AddDiscountInObj([{ name: "Laptop", price: 60000 },{ name: "Phone", price: 30000 }]));
+
+///// /    8. Convert Strings to Objects
+/// const skills = ["HTML", "CSS", "React"];
+
+//Expected
+/// [{ skill: "HTML" },{ skill: "CSS" },{ skill: "React" }]
+
+function ConvertStrToObj(skills){
+    let res = skills.map((skill) => {
+        return {skill}
+    })
+    return res
+}
+console.log(' ConvertStrToObj |',  ConvertStrToObj(["HTML", "CSS", "React"]));
+
+/////////  9. Format Currency
+///// const prices = [100, 2500, 9999];
+/// Expected
+//// ["₹100","₹2500","₹9999"]
+
+function FormatCurrency(prices){
+ return prices.map((price) => `₹${price}`)
+}
+console.log('FormatCurrency |', FormatCurrency([100, 2500, 9999]));
+
+////// / / 10. Numbering List
+/// const tasks = ["Learn JS", "Learn React", "Build Project"];
+/// Expected
+// / ["1. Learn JS","2. Learn React","3. Build Project"]
+
+function NumberingList(tasks){
+  return tasks.map((task, i) => {
+     if (i === 0) {
+        return `${1}.${task}`
+     } else {
+        return `${i + 1}.${task}`
+     }
+  })
+}
+console.log('NumberingList |', NumberingList(["Learn JS", "Learn React", "Build Project"]));
