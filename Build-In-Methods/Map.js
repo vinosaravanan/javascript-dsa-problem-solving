@@ -56,7 +56,7 @@ function FullName(users){
 }
 console.log(' FullName |', FullName([{ first: "John", last: "Doe" },{ first: "Jane", last: "Smith" }]));
 
-//////////  5. Add "isAvailable"
+//////////    5. Add "isAvailable"
 //   const products = [{ name: "Phone", stock: 10 },{ name: "TV", stock: 0 }];
 /// Expected
 //[{name: "Phone",stock: 10,isAvailable: true},{name: "TV",stock: 0,isAvailable: false}]
@@ -73,3 +73,29 @@ function IsAvailable(products){
   return res
 }
 console.log('IsAvailable', IsAvailable([{ name: "Phone", stock: 10 },{ name: "TV", stock: 0 }]));
+
+
+//////        6. Extract Emails
+///  const users = [{ name: "John", email: "john@gmail.com" },{ name: "Sara", email: "sara@gmail.com" }];
+///  Expected
+/// ["john@gmail.com","sara@gmail.com"]
+
+function ExtractEmails(users){
+  let res = users.map((user) => user.email)
+  return res
+}
+console.log('xtractEmails |', ExtractEmails([{ name: "John", email: "john@gmail.com" },{ name: "Sara", email: "sara@gmail.com" }]));
+
+////////////   7. Add Discount Price
+//// const products = [{ name: "Laptop", price: 60000 },{ name: "Phone", price: 30000 }];
+////// Expected
+//// [{name: "Laptop",price: 60000,discountPrice: 54000},{name: "Phone",price: 30000,discountPrice: 27000}]
+
+function AddDiscountInObj(products){
+  let res = products.map((product) => {
+    let discountPrice = product.price * (1 - 20 / 100)
+     return {...product, discountPrice}
+  })
+return res
+}
+console.log('AddDiscountInObj |', AddDiscountInObj([{ name: "Laptop", price: 60000 },{ name: "Phone", price: 30000 }]));
