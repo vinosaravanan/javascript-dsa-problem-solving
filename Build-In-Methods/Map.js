@@ -1,7 +1,7 @@
 /////      This file Contain map method  problem and Answer
 
 
-//      1. Convert names to uppercase
+///////// 1. Convert names to uppercase
 // const users = ["vinoth", "rahul", "kumar"];
 
 // Expected
@@ -14,7 +14,7 @@ function ConvertToUpperCase(names){
 console.log('ConvertToUpperCase |', ConvertToUpperCase(['vinoth', 'rahul', 'kumar']));
 
 
-/////       2. Add GST (18%)
+////////////// 2. Add GST (18%)
 ////  const prices = [100, 250, 500];
 
 ///// Expected
@@ -26,4 +26,33 @@ function AddGstToPrice(price){
 }
 console.log('AddGstToPrice |',AddGstToPrice([100, 250, 500]));
 
+/////////////  3. Add IDs
+/// const products = [{ name: "Laptop" },{ name: "Mouse" },{ name: "Keyboard" }];
+
+//Expected
+//[{ id: 1, name: "Laptop" }, { id: 2, name: "Mouse" },{ id: 3, name: "Keyboard" }]
+
+function AddIDsInObj(products){
+  let res = products.map((product, i) => {
+      let id = Math.floor(Math.random() * 10)
+       return {id, ...product}
+  })
+  return res
+}
+console.log('AddIDsInObj |', AddIDsInObj([{ name: "Laptop" },{ name: "Mouse" },{ name: "Keyboard" }]));
+
+/////////////  4. Full Name
+/// const users = [{ first: "John", last: "Doe" },{ first: "Jane", last: "Smith" }];
+
+//// Expected
+/// ["John Doe","Jane Smith"]
+
+function FullName(users){
+  let res = users.map((user) => {
+    const {first, last} = user
+    return [first, last].join(' ')
+  })
+  return res
+}
+console.log(' FullName |', FullName([{ first: "John", last: "Doe" },{ first: "Jane", last: "Smith" }]));
 
