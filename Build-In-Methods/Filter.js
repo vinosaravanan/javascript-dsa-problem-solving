@@ -25,3 +25,14 @@ function FindOddNumber(nums){
 }
 console.log('FindOddNumber |', FindOddNumber([2,5,8,11,14,17]));
 
+/////  3. Filter Strings Longer Than 5 Characters
+// const words = ["React","JavaScript","CSS","Redux","Node"];
+// Output ["JavaScript"]
+
+function FilterStr(words) {
+let res = words.filter((word) => {
+    return word && word.length > 5
+})
+return res
+}
+console.log('FilterStr |', FilterStr(["React","JavaScript","CSS","Redux","Node"]));
