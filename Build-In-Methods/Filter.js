@@ -1,7 +1,8 @@
 /////      This file Contain filter method  problem and Answer
 
-// const numbers = [10, 15, 22, 31, 40, 55];
 
+////   1. Filter Even Numbers
+// const numbers = [10, 15, 22, 31, 40, 55];
 // Output: [10, 22, 40]
 
 function FindEvenNumber(nums){
@@ -11,3 +12,16 @@ function FindEvenNumber(nums){
 return res
 }
 console.log('FindEvenNumber|', FindEvenNumber([10, 15, 22, 31, 40, 55]));
+
+////   2. Filter Odd Numbers
+//  const numbers = [2,5,8,11,14,17];
+// Output: [5,11,17]
+
+function FindOddNumber(nums){
+    let res = nums.filter((num) => {
+        return num % 2 === 1
+    })
+    return res
+}
+console.log('FindOddNumber |', FindOddNumber([2,5,8,11,14,17]));
+
