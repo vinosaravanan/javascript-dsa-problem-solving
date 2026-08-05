@@ -36,3 +36,13 @@ let res = words.filter((word) => {
 return res
 }
 console.log('FilterStr |', FilterStr(["React","JavaScript","CSS","Redux","Node"]));
+
+/////  4. Filter Positive Numbers
+//  const nums = [-5,3,-10,8,0,15];
+/// Output [3,8,15];
+
+function FilterPositiveNumber(nums){
+    let res = nums.filter((num) => num > 0)
+    return res
+}
+console.log('FilterPositiveNumber |', FilterPositiveNumber([-5,3,-10,8,0,15]));
