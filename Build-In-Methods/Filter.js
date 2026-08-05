@@ -46,3 +46,13 @@ function FilterPositiveNumber(nums){
     return res
 }
 console.log('FilterPositiveNumber |', FilterPositiveNumber([-5,3,-10,8,0,15]));
+
+/////  5. Filter Products Under ₹1000
+// const products = [{id:1,name:"Mouse",price:500}, {id:2,name:"Laptop",price:50000}, {id:3,name:"Keyboard",price:900}];
+//  Output[{id:1,name:"Mouse",price:500},{id:3,name:"Keyboard",price:900}];
+
+function ProductsFilter(products){
+    let res = products.filter((product) => product.price < 1000);
+    return res
+}
+console.log('ProductsFilter |', ProductsFilter([{id:1,name:"Mouse",price:500}, {id:2,name:"Laptop",price:50000}, {id:3,name:"Keyboard",price:900}]));
