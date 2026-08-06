@@ -41,3 +41,32 @@ function MostExpensiveProduct(products){
   return res
 }
 console.log('MostExpensiveProduct |', MostExpensiveProduct([{ id: 1, name: "Mouse", price: 1500 },  { id: 2, name: "Keyboard", price: 3500 },  { id: 3, name: "Laptop", price: 50000 },{ id: 4, name: "Monitor", price: 15000 },{ id: 5, name: "Headphones", price: 2500 } ]));
+
+/////  4. Group Students by Grade
+/////// input
+const Students = [
+ {name:"John", grade:"A"},
+ {name:"Mike", grade:"B"},
+ {name:"Sara", grade:"A"},
+ {name:"David", grade:"C"}
+]
+// ///// Output
+// {
+//  A:["John","Sara"],
+//  B:["Mike"],
+//  C:["David"]
+// }
+
+function GroupStudentsByGrade(Students){
+   let res = Students.reduce((acc, student) => {
+        let grade = student.grade;
+        if (!acc[grade]) {
+            acc[grade] = []
+        }
+        acc[grade].push(student.name);
+        return acc
+   }, {})
+   return res
+}
+console.log('GroupStudentsByGrade |', GroupStudentsByGrade(Students));
+
