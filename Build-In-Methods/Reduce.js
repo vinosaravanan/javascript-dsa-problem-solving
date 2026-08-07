@@ -88,3 +88,22 @@ function CountFreqency(fruits){
   return res
 }
 console.log('CountFreqency |', CountFreqency(["apple","banana","apple","orange","banana","apple"]));
+
+/// / 6. Convert Array into Object
+/// [{id:1,name:"John"},{id:2,name:"Sara"},{id:3,name:"Mike"}]
+
+// Output
+// {
+//  1:{id:1,name:"John"},
+//  2:{id:2,name:"Sara"},
+//  3:{id:3,name:"Mike"}
+// }
+
+function ConvertArrayIntoObject(names){
+  let res = names.reduce((acc, name) => {
+     acc[name.id] = {id:name.id, name:name.name}
+     return acc
+  }, {})
+  return res
+}
+console.log('ConvertArrayIntoObject |', ConvertArrayIntoObject([{id:1,name:"John"},{id:2,name:"Sara"},{id:3,name:"Mike"}]));
