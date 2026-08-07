@@ -70,3 +70,21 @@ function GroupStudentsByGrade(Students){
 }
 console.log('GroupStudentsByGrade |', GroupStudentsByGrade(Students));
 
+//// / 5. Count Frequency of Words
+/// ["apple","banana","apple","orange","banana","apple"]
+
+// Output
+// {
+//  apple:3,
+//  banana:2,
+//  orange:1
+// }
+
+function CountFreqency(fruits){
+  let res = fruits.reduce((acc, fruit) => {
+    acc[fruit] = (acc[fruit] || 0) + 1;
+    return acc
+  } , {})
+  return res
+}
+console.log('CountFreqency |', CountFreqency(["apple","banana","apple","orange","banana","apple"]));
