@@ -4,7 +4,7 @@
 /////////////  output - Modified Array: [2, 3, 5, 6]
 /////////////            Length: 4
 
-/// Approche: 1 using nested loops
+/// Approche 1:using nested loops
 function RemoveDublicateInplace(nums){
     for (let i = 0; i < nums.length; i++) {
        for (let j = i + 1; j < nums.length; j++) {
@@ -17,3 +17,14 @@ function RemoveDublicateInplace(nums){
     return nums
 }
 console.log('RemoveDublicateInplace |', RemoveDublicateInplace([2, 3, 2, 3, 5, 6, 5]));
+
+/// Approche 2: Using set method
+function RemoveDublicateWithSet(nums){
+  let uniqu = [...new Set(nums)];
+  for (let i = 0; i < nums.length; i++) {
+       nums[i] = uniqu[i]
+  }
+  nums.length = uniqu.length
+  return {nums, length:nums.length}
+}
+console.log('RemoveDublicateWithSet |', RemoveDublicateWithSet([2, 3, 2, 3, 5, 6, 5]));
