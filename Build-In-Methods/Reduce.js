@@ -107,3 +107,26 @@ function ConvertArrayIntoObject(names){
   return res
 }
 console.log('ConvertArrayIntoObject |', ConvertArrayIntoObject([{id:1,name:"John"},{id:2,name:"Sara"},{id:3,name:"Mike"}]));
+
+
+////   7. Count Passed Students
+// [
+//  {name:"A",marks:35},
+//  {name:"B",marks:60},
+//  {name:"C",marks:75},
+//  {name:"D",marks:20}
+// ]
+
+// Output: 2
+
+function CountPassed(students){
+  let res = students.reduce((acc, student) => {
+     if (student.marks > 50) {
+          acc++
+     }
+     return acc
+
+  }, 0)
+  return res
+}
+console.log('CountPassed |', CountPassed([{name:"A",marks:35},{name:"B",marks:60},{name:"C",marks:75},{name:"D",marks:20}]));
