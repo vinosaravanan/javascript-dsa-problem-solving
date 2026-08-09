@@ -130,3 +130,25 @@ function CountPassed(students){
   return res
 }
 console.log('CountPassed |', CountPassed([{name:"A",marks:35},{name:"B",marks:60},{name:"C",marks:75},{name:"D",marks:20}]));
+
+///// 8. Create Initials
+// [
+//  "John Doe",
+//  "Sara Ali",
+//  "Mike Tyson"
+// ]
+
+// Output: ["JD","SA","MT"]
+
+function CreateInitial(names){
+  let res = names.reduce((acc, name) => {
+      let pairs = name.split(' ');
+      let FirstLetter = pairs[0][0];
+      let secontLetter = pairs[1][0];
+      acc.push(FirstLetter + secontLetter);
+      return acc
+}, [])
+return res
+}
+console.log('CreateInitial |', CreateInitial(["John Doe","Sara Ali","Mike Tyson"]));
+
