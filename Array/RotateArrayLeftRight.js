@@ -42,3 +42,22 @@ function RotateArrLeftAndRight(arr, k, direaction){
 }
 console.log('RotateArrLeftAndRight-Left |', RotateArrLeftAndRight([1, 2, 3, 4, 5, 6, 7], 3, 'Left'));
 console.log('RotateArrLeftAndRight-Right |', RotateArrLeftAndRight([1, 2, 3, 4, 5, 6, 7], 3, 'Right'));
+
+
+
+
+///// Approche 2: Using Arr method Pop, push, shipt, unshipt
+
+function RotateArrLeftandRightWithBuildMethod(arr, k, direaction){
+  for (let i = 0; i < k; i++) {
+   if (direaction === "left") {
+      arr.push(arr.shift())
+   }
+   if (direaction === "Right") {
+      arr.push(arr.pop())
+   }
+  }
+  return arr
+}
+console.log('RotateArrLeftandRightWithBuildMethod-Left |', RotateArrLeftandRightWithBuildMethod([1, 2, 3, 4, 5, 6, 7], 3, 'Left'));
+console.log('RotateArrLeftandRightWithBuildMethod-Right |', RotateArrLeftandRightWithBuildMethod([1, 2, 3, 4, 5, 6, 7], 3, 'Right'));
