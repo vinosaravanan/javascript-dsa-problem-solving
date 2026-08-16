@@ -190,29 +190,6 @@ Each project focuses on designing classes, defining relationships between object
 * Git
 * GitHub
 
----
-
-# 📈 Progress
-
-* [ ] Arrays
-* [ ] Strings
-* [ ] Objects
-* [ ] Hash Maps
-* [ ] Sets
-* [ ] Stack
-* [ ] Queue
-* [ ] Linked List
-* [ ] Recursion
-* [ ] Searching
-* [ ] Sorting
-* [ ] DSA Patterns
-* [ ] JavaScript Built-in Methods
-* [ ] OOP Fundamentals
-* [ ] Advanced OOP
-* [ ] OOP Projects
-
----
-
 ## 📌 Purpose
 
 This repository is a continuous learning and interview preparation repository. Problems and projects will be added regularly as I improve my JavaScript, DSA, and Object-Oriented Programming skills.
