@@ -8,7 +8,7 @@
 //   Input: [72, 101, 108, 108, 111]
 //   Output: "Hello"
 
-
+/// Approche 1: Using TextDecoder (Best in Interviews)
 function ConvertArrToStr(arr){
   let buffer = new Uint8Array(arr);
   let decoder = new TextDecoder('utf-8');
@@ -16,3 +16,12 @@ function ConvertArrToStr(arr){
   return str
 }
 console.log(' ConvertArrToStr |', ConvertArrToStr([72, 101, 108, 108, 111]));
+
+
+/// Approche 2: Using String.fromCharCode
+function ConvertArrToStrWithFromCharCode(arr){
+  let str = String.fromCharCode(...arr);
+  return str
+}
+console.log('ConvertArrToStrWithFromCharCode |', ConvertArrToStrWithFromCharCode([72, 101, 108, 108, 111]));
+
