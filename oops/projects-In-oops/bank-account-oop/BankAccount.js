@@ -31,4 +31,10 @@ class BankAccount {
         return this.#Balance
     }
 
+    getTransactionHistory(){
+        return [...this.#Transation]
+    }
+
 }
+
+module.exports = BankAccount
