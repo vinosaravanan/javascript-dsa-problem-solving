@@ -9,12 +9,16 @@ class BankAccount {
          this.#Transation = []
     }
 
+    getBalance(){
+        return this.#Balance
+    }
+
     Deposit(amount){
       if (amount <= 0) {
         throw new Error("deposit must be positive");
       }
       this.#Balance += amount;
-      this.Transaction.push(new Transaction('deposit', amount, this.#Balance))
+      this.#Transation.push(new Transaction('deposit', amount, this.#Balance))
       return this.#Balance
     }
 

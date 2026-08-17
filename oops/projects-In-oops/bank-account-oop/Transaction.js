@@ -6,6 +6,6 @@ class Transaction {
         this.amount = amount;
         this.balanceAfter = balanceAfter;
     }
-
-    
 }
+
+module.exports = Transaction
