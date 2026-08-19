@@ -56,3 +56,27 @@ function ProductsFilter(products){
     return res
 }
 console.log('ProductsFilter |', ProductsFilter([{id:1,name:"Mouse",price:500}, {id:2,name:"Laptop",price:50000}, {id:3,name:"Keyboard",price:900}]));
+
+/////  6. Filter Users Above 18
+// const users=[ {name:"John",age:16}, {name:"Sara",age:25}, {name:"Mike",age:30} ];
+
+function FilterUser(users){
+    let res = users.filter((user) => user.age > 18)
+    return res
+}
+console.log('FilterUser |', FilterUser([{name:"John",age:16}, {name:"Sara",age:25}, {name:"Mike",age:30}]));
+
+/////   7. Filter Active Users
+// const users = [
+// {name:"John",active:true},
+// {name:"Sara",active:false},
+// {name:"Mike",active:true}
+// ];
+
+//// output - [{name:"John",active:true}]
+
+function FilterActiveUsers(users) {
+    return users.filter((user) => user.active === true )
+}
+console.log('FilterActiveUsers |', FilterActiveUsers([{name:"John",active:true},{name:"Sara",active:false},{name:"Mike",active:true}]));
+
