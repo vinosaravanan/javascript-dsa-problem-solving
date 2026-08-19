@@ -92,3 +92,17 @@ function FilterCompletedTasks(tasks) {
     return tasks.filter((task) => task.completed === true)
 }
 console.log('FilterCompletedTasks |', FilterCompletedTasks([{id:1,title:"HTML",completed:true},{id:2,title:"CSS",completed:false},{id:3,title:"JS",completed:true}]));
+
+////   9. Filter Students Passed
+// Pass mark = 35
+// const students = [
+// {name:"A",mark:80},
+// {name:"B",mark:25},
+// {name:"C",mark:60}
+// ];
+//// output - [{name:"A",mark:80},{name:"C",mark:60}]
+
+function FilterStudentsPassed(students) {
+    return students.filter((student) => student.mark > 35)
+}
+console.log('FilterStudentsPassed |',FilterStudentsPassed([{name:"A",mark:80},{name:"B",mark:25},{name:"C",mark:60}]));
