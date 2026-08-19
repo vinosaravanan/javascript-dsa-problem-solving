@@ -73,10 +73,22 @@ console.log('FilterUser |', FilterUser([{name:"John",age:16}, {name:"Sara",age:2
 // {name:"Mike",active:true}
 // ];
 
-//// output - [{name:"John",active:true}]
+//// output - [{name:"John",active:true}, {name:"Mike",active:true}]
 
 function FilterActiveUsers(users) {
     return users.filter((user) => user.active === true )
 }
 console.log('FilterActiveUsers |', FilterActiveUsers([{name:"John",active:true},{name:"Sara",active:false},{name:"Mike",active:true}]));
 
+////   8. Filter Completed Tasks
+// const tasks=[
+// {id:1,title:"HTML",completed:true},
+// {id:2,title:"CSS",completed:false},
+// {id:3,title:"JS",completed:true}
+// ];
+///// output - [{id:1,title:"HTML",completed:true}, {id:3,title:"JS",completed:true}]
+
+function FilterCompletedTasks(tasks) {
+    return tasks.filter((task) => task.completed === true)
+}
+console.log('FilterCompletedTasks |', FilterCompletedTasks([{id:1,title:"HTML",completed:true},{id:2,title:"CSS",completed:false},{id:3,title:"JS",completed:true}]));
