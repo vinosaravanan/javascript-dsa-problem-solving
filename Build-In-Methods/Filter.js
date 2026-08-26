@@ -107,6 +107,7 @@ function FilterStudentsPassed(students) {
 }
 console.log('FilterStudentsPassed |',FilterStudentsPassed([{name:"A",mark:80},{name:"B",mark:25},{name:"C",mark:60}]));
 
+///// 10. Filter Emails Ending with gmail.com 
 // input - const emails = [ "a@gmail.com", "b@yahoo.com", "c@gmail.com" ];
 // Output: [ "a@gmail.com", "c@gmail.com" ]
 
@@ -115,3 +116,14 @@ function FilterEmails(emails) {
 }
 
 console.log('FilterEmails |',FilterEmails([ "a@gmail.com", "b@yahoo.com", "c@gmail.com" ])); 
+
+
+//// 11. Filter Names Starting With "A"
+// const names= ["Arun", "John", "Anitha","David];
+
+function FilterNames(names) {
+    return names.filter((name) => {
+         return name.startsWith('A');
+    })
+}
+console.log('FilterNames |', FilterNames(["Arun", "John", "Anitha","David"]));
