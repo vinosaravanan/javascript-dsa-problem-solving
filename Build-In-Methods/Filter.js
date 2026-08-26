@@ -106,3 +106,12 @@ function FilterStudentsPassed(students) {
     return students.filter((student) => student.mark > 35)
 }
 console.log('FilterStudentsPassed |',FilterStudentsPassed([{name:"A",mark:80},{name:"B",mark:25},{name:"C",mark:60}]));
+
+// input - const emails = [ "a@gmail.com", "b@yahoo.com", "c@gmail.com" ];
+// Output: [ "a@gmail.com", "c@gmail.com" ]
+
+function FilterEmails(emails) {
+    return emails.filter((email) => email.endsWith('gmail.com'))
+}
+
+console.log('FilterEmails |',FilterEmails([ "a@gmail.com", "b@yahoo.com", "c@gmail.com" ])); 
